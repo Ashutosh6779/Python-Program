@@ -1,0 +1,24 @@
+def turns(a,b,ch):
+    org=ch
+    turn=1
+    for i in  ch:
+        ch1=ch[-a:]
+        ch=ch.replace(" ","")[:-a]
+        ch=ch1+ch
+        if ch!=org:
+            turn=turn+1
+            ch2=ch[-b:]
+            ch=ch.replace(" ","")[:-b]
+            ch=ch2+ch
+            turn=turn+1
+        if ch==org:
+            break
+        turn=turn+1
+    print(turn)
+ch=input("Enter the string\n")
+a=int(input("Enter the value of m\n"))
+b=int(input("Enter the value of n\n"))
+turns(a, b, ch)
+            
+            
+      
